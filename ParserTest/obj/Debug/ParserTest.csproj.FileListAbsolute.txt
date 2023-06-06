@@ -1,8 +1,0 @@
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\bin\Debug\ParserTest.exe.config
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\bin\Debug\ParserTest.exe
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\bin\Debug\ParserTest.pdb
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\obj\Debug\ParserTest.csproj.AssemblyReference.cache
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\obj\Debug\ParserTest.csproj.SuggestedBindingRedirects.cache
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\obj\Debug\ParserTest.csproj.CoreCompileInputs.cache
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\obj\Debug\ParserTest.exe
-C:\Users\Leo\Downloads\ParserTest\ParserTest\ParserTest\obj\Debug\ParserTest.pdb
