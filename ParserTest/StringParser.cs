@@ -46,18 +46,13 @@ namespace ParserTest
 
         public List<string> Parse2(string inputText)
         {
+            // List to store the extracted substrings
             List<string> substrings = new List<string>();
 
             if (!string.IsNullOrEmpty(inputText))
             {
-
-                // Use regular expression to match continuous sequences of alphanumeric characters
-                //string pattern = @"\w+";
-                //string pattern = @"\b\w+\b";
-                //string pattern = @"[^\W_]+";
-                //string pattern = @"\b[^\W_]+\b";
+                // Regular expression pattern to match continuous sequences of alphanumeric characters
                 string pattern = @"\b[a-zA-Z0-9]+\b";
-
 
                 // Find all matches of the pattern in the inputText string
                 MatchCollection matches = Regex.Matches(inputText, pattern);
@@ -67,7 +62,6 @@ namespace ParserTest
                 {
                     substrings.Add(match.Value.ToLower());
                 }
-
             }
 
             return substrings;
@@ -110,21 +104,23 @@ namespace ParserTest
          */
         public List<string> Parse3(string inputText)
         {
+            // List to store the extracted substrings
             List<string> substrings = new List<string>();
 
             if (!string.IsNullOrEmpty(inputText))
             {
-
-
                 int startIndex = -1;
                 int endIndex = -1;
 
+                // Iterate through each character in the input string
                 for (int i = 0; i < inputText.Length; i++)
                 {
                     char currentChar = inputText[i];
 
+                    // Check if the current character is alphanumeric
                     if (char.IsLetterOrDigit(currentChar))
                     {
+                        // If this is the start of a new alphanumeric sequence
                         if (startIndex == -1)
                         {
                             startIndex = i;
@@ -132,16 +128,23 @@ namespace ParserTest
                     }
                     else if (startIndex != -1)
                     {
+                        // If the current sequence has ended
                         endIndex = i - 1;
+                        // Extract the substring from startIndex to endIndex
                         string substring = inputText.Substring(startIndex, endIndex - startIndex + 1);
+                        // Add the substring to the list
                         substrings.Add(substring);
+                        // Reset startIndex to -1 to indicate the start of a new sequence
                         startIndex = -1;
                     }
                 }
 
+                // Check if there is a remaining sequence at the end of the input string
                 if (startIndex != -1)
                 {
+                    // Extract the substring from startIndex to the end of the string
                     string substring = inputText.Substring(startIndex);
+                    // Add the remaining substring to the list
                     substrings.Add(substring);
                 }
             }

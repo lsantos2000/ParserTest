@@ -55,7 +55,7 @@ namespace ParserTest
 
 
             // Solution by Leonardo Santos-Macias, using Parse2() method
-            Console.WriteLine("\nForst solution by Leonardo Santos-Macias. Using a regex. Did not pass all tests");
+            Console.WriteLine("\nFirst solution by Leonardo Santos-Macias. Using a regex. Did not pass all tests");
             for (int i = 0; i < TEST_DATA.Length; i++)
             {
                 string[] data = TEST_DATA[i];
@@ -82,7 +82,7 @@ namespace ParserTest
             }
 
             // Solution by Leonardo Santos-Macias, using Parse3() method
-            Console.WriteLine("\nSecond solution by Leonardo Santos-Macias. Using a regex. It passes all tests");
+            Console.WriteLine("\nSecond solution by Leonardo Santos-Macias. Using a string parsing. It passes all tests");
             for (int i = 0; i < TEST_DATA.Length; i++)
             {
                 string[] data = TEST_DATA[i];
