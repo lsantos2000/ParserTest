@@ -36,61 +36,7 @@ namespace ParserTest
 
                 try
                 {
-                    List<string> lst = parser.Parse(s);
-
-                    if (data.Skip(1).SequenceEqual(lst, StringComparer.OrdinalIgnoreCase))
-                    {
-                        Console.WriteLine($"{i}: passed ...");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{i}: not passed ...");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"{i}: error: '{ex.Message}'");
-                }
-            }
-
-
-            // Solution by Leonardo Santos-Macias, using Parse2() method
-            Console.WriteLine("\nFirst solution by Leonardo Santos-Macias. Using a regex. Did not pass all tests");
-            for (int i = 0; i < TEST_DATA.Length; i++)
-            {
-                string[] data = TEST_DATA[i];
-
-                string s = data[0];
-
-                try
-                {
-                    List<string> lst = parser.Parse2(s);
-
-                    if (data.Skip(1).SequenceEqual(lst, StringComparer.OrdinalIgnoreCase))
-                    {
-                        Console.WriteLine($"{i}: passed ...");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{i}: not passed ...");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"{i}: error: '{ex.Message}'");
-                }
-            }
-
-            // Solution by Leonardo Santos-Macias, using Parse3() method
-            Console.WriteLine("\nSecond solution by Leonardo Santos-Macias. Using a string parsing. It passes all tests");
-            for (int i = 0; i < TEST_DATA.Length; i++)
-            {
-                string[] data = TEST_DATA[i];
-
-                string s = data[0];
-
-                try
-                {
+                    //List<string> lst = parser.Parse(s);
                     List<string> lst = parser.Parse3(s);
 
                     if (data.Skip(1).SequenceEqual(lst, StringComparer.OrdinalIgnoreCase))
@@ -107,6 +53,7 @@ namespace ParserTest
                     Console.WriteLine($"{i}: error: '{ex.Message}'");
                 }
             }
+
 
             Console.ReadLine();
 
